@@ -5,4 +5,9 @@ services:
     environment:
       - API_HASH=${API_HASH}
       - API_ID=${API_ID}
-      - BOT_TOKEN=${BOT_TOKEN}
+      - SESSION_STRING=${SESSION_STRING}
+      - BOT_LIST=${BOT_LIST}
+      - CHANNEL_OR_GROUP_ID=${CHANNEL_OR_GROUP_ID}
+      - MESSAGE_ID=${MESSAGE_ID}
+      - BOT_ADMIN_IDS=${BOT_ADMIN_IDS}
+      - TIME_ZONE=${TIME_ZONE}
