@@ -1,9 +1,3 @@
-#Copyright ©️ 2021 TeLe TiPs. All Rights Reserved
-#You are free to use this code in any of your project, but you MUST include the following in your README.md (Copy & paste)
-# ##Credits - [BotStatus Telegram bot by TeLe TiPs] (https://github.com/teletips/Powerful_BotStatus-TeLeTiPs)
-
-# Changing the code is not allowed! Read GNU AFFERO GENERAL PUBLIC LICENSE: https://github.com/teletips/Powerful_BotStatus-TeLeTiPs/blob/main/LICENSE
-
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 import asyncio
@@ -54,8 +48,6 @@ async def main_teletips():
                 xxx_teletips += f"\n\n✔️ Last checked on: {last_update} ({TIME_ZONE})\n\n<i>♻️ Refreshes automatically</i>"
                 await app.edit_message_text(int(CHANNEL_OR_GROUP_ID), MESSAGE_ID, xxx_teletips)
                 print(f"Last checked on: {last_update}")                
-                await asyncio.sleep(6300)
+                await asyncio.sleep(600)
                         
 app.run(main_teletips())
-
-#Copyright ©️ 2021 TeLe TiPs. All Rights Reserved
