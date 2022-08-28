@@ -21,7 +21,7 @@ async def main_teletips():
     async with app:
             while True:
                 print("Checking...")
-                xxx_teletips = f"📈 | **Real-Time Bot Status**"
+                xxx_teletips = "⏳ | **Real-Time Bot Status**"
                 for bot in BOT_LIST:
                     try:
                         yyy_teletips = await app.send_message(bot, "/start")
@@ -44,8 +44,8 @@ async def main_teletips():
                     except FloodWait as e:
                         await asyncio.sleep(e.x)            
                 time = datetime.datetime.now(pytz.timezone(f"{TIME_ZONE}"))
-                last_update = time.strftime(f"%d %b %Y at %I:%M %p")
-                xxx_teletips += f"\n\n✔️ Last checked on: {last_update} ({TIME_ZONE})\n\n<i>♻️ Refreshes automatically</i>"
+                last_update = time.strftime(f"%d %b %Y - %I:%M %p")
+                xxx_teletips += f"\n\n**Last checked on: {last_update} [{TIME_ZONE}]\n\n<i>__Refreshes automatically...__</i>"
                 await app.edit_message_text(int(CHANNEL_OR_GROUP_ID), MESSAGE_ID, xxx_teletips)
                 print(f"Last checked on: {last_update}")                
                 await asyncio.sleep(600)
